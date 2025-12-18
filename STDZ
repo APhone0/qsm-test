@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Zone - Shining</title>
+
+    <!-- خطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent: #ffd659;
+            --accent-light: #ffdf80;
+            --accent-dark: #e6c150;
+            --nav-bg: #0d1117;
+            --header-bg: #161b22;
+            --bg-base: #0a0d12;
+            --card-bg: #1a1f27;
+            --text-light: #f8fafc;
+            --text-muted: #9ca3af;
+            --shadow: 0 10px 25px rgba(0,0,0,0.3);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: radial-gradient(circle at top, #1a1f27 0%, #0a0d12 80%);
+            color: var(--text-light);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #11161c, #161b22);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 8vw;
+        }
+
+        .logo-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 24px;
+            backdrop-filter: blur(4px);
+        }
+
+        .brand-title {
+            font-family: "Pacifico", cursive;
+            font-size: 40px;
+            color: var(--accent);
+            text-shadow: 0 0 6px #ffd659, 0 0 18px #ffd659aa;
+        }
+
+        nav {
+            background: var(--nav-bg);
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 8vw;
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+        }
+
+        .nav-link {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+            .nav-link:hover,
+            .nav-link.active {
+                color: var(--accent);
+                background: rgba(255, 214, 89, 0.12);
+            }
+
+        /* ---------------- Student Zone Content ---------------- */
+
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 8vw;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 36px;
+            color: var(--accent);
+            margin-bottom: 40px;
+        }
+
+        .zone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+        }
+
+        .zone-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+            .zone-card:hover {
+                transform: translateY(-6px);
+                box-shadow: var(--shadow-hover);
+                border-color: rgba(255,214,89,0.25);
+            }
+
+        .zone-title {
+            font-size: 22px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .zone-desc {
+            color: var(--text-muted);
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="logo-circle">QC</div>
+            <div class="brand-title">Shining</div>
+            <div class="logo-circle">S</div>
+        </div>
+
+        <nav>
+            <div class="nav-inner">
+                <a href="Main.html" class="nav-link">Home</a>
+                <a href="STD.html" class="nav-link">Student Compass</a>
+                <a href="Dining.html" class="nav-link active">Dining</a>
+                <a href="FF.html" class="nav-link">Focus & Faith</a>
+                <a href="STDZ.html" class="nav-link">Student Zone</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="page-title">Student Zone</h1>
+
+        <div class="zone-grid">
+
+            <div class="zone-card">
+                <h3 class="zone-title">إنشاء حساب طباعة</h3>
+                <p class="zone-desc">إنشاء حساب خاص للطابعات داخل الكلية.</p>
+            </div>
+
+            <div class="zone-card">
+                <h3 class="zone-title">الدخول إلى المودل</h3>
+                <p class="zone-desc">الانتقال إلى منصة Moodle الخاصة بالكلية.</p>
+            </div>
+
+            <div class="zone-card">
+                <h3 class="zone-title">إنشاء توجه</h3>
+                <p class="zone-desc">إرشادات وخطوات لاختيار واتخاذ التوجه المناسب.</p>
+            </div>
+
+            <div class="zone-card">
+                <h3 class="zone-title">قريباً</h3>
+                <p class="zone-desc">مربع فارغ سيتم استخدامه لاحقاً.</p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
