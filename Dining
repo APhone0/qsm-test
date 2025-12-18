@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dining - Shining</title>
+
+    <!-- خطوط -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent: #ffd659;
+            --accent-light: #ffdf80;
+            --nav-bg: #0d1117;
+            --header-bg: #161b22;
+            --bg-base: #0a0d12;
+            --card-bg: #1a1f27;
+            --text-light: #f8fafc;
+            --text-muted: #9ca3af;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: radial-gradient(circle at top, #1a1f27 0%, #0a0d12 80%);
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* الهيدر */
+        header {
+            background: linear-gradient(135deg, #11161c, #161b22);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 8vw;
+        }
+
+        .logo-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .brand-title {
+            font-family: "Pacifico", cursive;
+            font-size: 40px;
+            letter-spacing: 3px;
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(255,214,89,0.5);
+        }
+
+        nav {
+            background: var(--nav-bg);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 8vw;
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+        }
+
+        .nav-link {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: .3s;
+        }
+
+            .nav-link:hover,
+            .nav-link.active {
+                color: var(--accent);
+                background: rgba(255,214,89,0.1);
+            }
+
+        /* المحتوى */
+        main {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+            text-align: center;
+            transition: .3s;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+                background: #202631;
+                border-color: rgba(255,214,89,0.2);
+            }
+
+        .card-title {
+            font-size: 20px;
+            color: var(--accent-light);
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="logo-circle">QC</div>
+            <div class="brand-title">Shining</div>
+            <div class="logo-circle">S</div>
+        </div>
+
+        <nav>
+            <div class="nav-inner">
+                <a href="Main.html" class="nav-link">Home</a>
+                <a href="STD.html" class="nav-link">Student Compass</a>
+                <a href="Dining.html" class="nav-link active">Dining</a>
+                <a href="FF.html" class="nav-link">Focus & Faith</a>
+                <a href="STDZ.html" class="nav-link">Student Zone</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1 class="page-title">مقابلة مع مدير الكلية ومحاضرين الأقسام</h1>
+
+        <div class="grid">
+
+            <div class="card"><div class="card-title">مقابلة مع قسم الإنجليزي</div></div>
+
+            <div class="card"><div class="card-title">مقابلة مع قسم التربية غير المنهجية</div></div>
+
+            <div class="card"><div class="card-title">مقابلة مع قسم الحاسوب</div></div>
+
+            <div class="card"><div class="card-title">مقابلة مع قسم الدين والشريعة</div></div>
+
+            <div class="card"><div class="card-title">مقابلة مع قسم الرياضيات</div></div>
+
+            <div class="card"><div class="card-title">مقابلة مع قسم التربية الخاصة</div></div>
+
+            <div class="card"><div class="card-title">مقابلة مع قسم اللغة العربية</div></div>
+
+            <div class="card"><div class="card-title">مقابلة مع قسم اللغة العربية</div></div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
