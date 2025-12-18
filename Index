@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Al-Qasemi College - Shining</title>
+
+    <!-- خط عنوان "Shining" -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- خط عربي حديث -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --accent: #ffd659; /* أصفر دافئ وحديث */
+            --accent-light: #ffdf80; /* أصفر فاتح */
+            --accent-dark: #e6c150; /* أصفر داكن للتأكيد */
+            --nav-bg: #0d1117; /* مودرن مشابه GitHub dark */
+            --header-bg: #161b22; /* تدرج عصري أنيق */
+            --bg-base: #0a0d12; /* خلفية كاملة مودرن */
+            --card-bg: #1a1f27; /* خلفية البطاقات */
+            --text-light: #f8fafc;
+            --text-muted: #9ca3af;
+            --shadow: 0 10px 25px rgba(0,0,0,0.3);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #1a1f27 0%, #0a0d12 80%);
+            color: var(--text-light);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #11161c, #161b22);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        /* الشريط العلوي */
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 8vw;
+        }
+
+        /* الدوائر (الشعارات) — أكبر */
+        .logo-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid rgba(255,255,255,0.1);
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            box-shadow: 0 0 15px rgba(255,255,255,0.15), inset 0 0 20px rgba(255,255,255,0.05);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+            .logo-circle:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 20px rgba(255, 214, 89, 0.3);
+                border-color: rgba(255, 214, 89, 0.3);
+            }
+
+        /* نص Shining */
+        .brand-title {
+            font-family: "Pacifico", cursive;
+            font-size: 40px;
+            letter-spacing: 3px;
+            color: var(--accent);
+            text-shadow: 0 0 6px rgba(255, 214, 89, 0.6), 0 0 20px rgba(255, 214, 89, 0.4);
+            transition: all 0.3s ease;
+        }
+
+            .brand-title:hover {
+                transform: scale(1.05);
+                text-shadow: 0 0 10px rgba(255, 214, 89, 0.8), 0 0 30px rgba(255, 214, 89, 0.6);
+            }
+
+        /* شريط التنقل */
+        nav {
+            background: var(--nav-bg);
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 8vw;
+            display: flex;
+            justify-content: center;
+            gap: 36px;
+        }
+
+        .nav-link {
+            color: #d1d5db;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+            .nav-link:hover {
+                color: var(--accent);
+                background: rgba(255, 214, 89, 0.1);
+            }
+
+            .nav-link.active {
+                color: var(--accent);
+                background: rgba(255, 214, 89, 0.15);
+                box-shadow: 0 0 10px rgba(255, 214, 89, 0.2);
+            }
+
+        /* المحتوى الرئيسي */
+        main {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 40px 8vw;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hero-title {
+            font-size: 42px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: #0a0d12;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(255, 214, 89, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+            .cta-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(255, 214, 89, 0.4);
+            }
+
+        /* قسم البطاقات */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-hover);
+                border-color: rgba(255, 214, 89, 0.2);
+            }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 214, 89, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: var(--accent);
+        }
+
+        .feature-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .feature-description {
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* قسم الأخبار */
+        .news-section {
+            margin-top: 70px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--accent);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+            .section-title::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 50%;
+                transform: translateX(50%);
+                width: 80px;
+                height: 3px;
+                background: var(--accent);
+                border-radius: 10px;
+            }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .news-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+            .news-card:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-hover);
+            }
+
+        .news-image {
+            height: 160px;
+            background: linear-gradient(135deg, #2d3748, #4a5568);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+
+        .news-date {
+            font-size: 14px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .news-excerpt {
+            font-size: 15px;
+            color: var(--text-muted);
+        }
+
+        /* فوتر */
+        footer {
+            background: var(--nav-bg);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 40px 8vw;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: "Pacifico", cursive;
+            font-size: 28px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+            .footer-link:hover {
+                color: var(--accent);
+            }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        /* موبايل */
+        @media (max-width: 768px) {
+            .top-bar {
+                padding: 15px 5vw;
+            }
+
+            .logo-circle {
+                width: 55px;
+                height: 55px;
+            }
+
+            .brand-title {
+                font-size: 32px;
+            }
+
+            .nav-inner {
+                gap: 15px;
+                padding: 8px 5vw;
+            }
+
+            .nav-link {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+
+            main {
+                padding: 30px 5vw;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .features-section {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-title {
+                font-size: 26px;
+            }
+
+            .logo-circle {
+                width: 45px;
+                height: 45px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="logo-circle" title="شعار الكلية (مؤقت)">QC</div>
+
+            <div class="brand-title">Shining</div>
+
+            <div class="logo-circle" title="لوجو الموقع (مؤقت)">S</div>
+        </div>
+
+        <nav>
+            <div class="nav-inner">
+                <a href="Main.html" class="nav-link">Home</a>
+                <a href="STD.html" class="nav-link">Student Compass</a>
+                <a href="Dining.html" class="nav-link active">Dining</a>
+                <a href="FF.html" class="nav-link">Focus & Faith</a>
+                <a href="STDZ.html" class="nav-link">Student Zone</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1 class="hero-title">مرحباً بكم في كلية القاسمي</h1>
+            <p class="hero-subtitle">منصة "Shining" توفر لطلاب كلية القاسمي تجربة تعليمية متميزة، تجمع بين التكنولوجيا الحديثة والرؤية التعليمية المتطورة وهدفها مساعدة وارشاد الطالب.</p>
+            <a href="#" class="cta-button">استكشف المنصة</a>
+        </section>
+
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3 class="feature-title">دليل الطالب الشامل</h3>
+                <p class="feature-description">جميع المعلومات والموارد التي يحتاجها الطالب في مكان واحد، من اماكن التعلم الى جميع الارشادات.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎤</div>
+                <h3 class="feature-title">ارشاد ومتابعة</h3>
+                <p class="feature-description">اطلع على مقابلات مع طلاب من السنوات الماضية من جميع التخصصات.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📅</div>
+                <h3 class="feature-title">التقويم التعليمي</h3>
+                <p class="feature-description">ابق على اطلاع دائم بجميع الفعاليات القادمة، وورش العمل، والعطل، في الكلية.</p>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <h2 class="section-title">صور وفعاليات</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">صورة الخبر</div>
+                    <div class="news-content">
+                        <div class="news-date">00.00.0000</div>
+                        <h4 class="news-title">قيد التطوير</h4>
+                        <p class="news-excerpt">قيد المعالجة والتطوير</p>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image">صورة الخبر</div>
+                    <div class="news-content">
+                        <div class="news-date">00.00.0000</div>
+                        <h4 class="news-title">قيد التطوير</h4>
+                        <p class="news-excerpt">قيد المعالجة والتطوير</p>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <div class="news-image">صورة الخبر</div>
+                    <div class="news-content">
+                        <div class="news-date">00.00.0000</div>
+                        <h4 class="news-title">قيد التطوير</h4>
+                        <p class="news-excerpt">قيد المعالجة والتطوير</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Shining</div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">عن الكلية</a>
+                <a href="#" class="footer-link">الموقع الرسمي للكلية</a>
+            </div>
+            <div class="copyright">© 2025 كلية القاسمي(محمد اغبارية, مريم ابو راس , صفا ابو مخ , مروة ابو مخ , ابرار زيود , نغم سعادة). جميع الحقوق محفوظة.</div>
+        </div>
+    </footer>
+
+</body>
+</html>
